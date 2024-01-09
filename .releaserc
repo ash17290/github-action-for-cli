@@ -21,7 +21,7 @@ plugins:
 - - "@semantic-release/git"
   - assets:
     - "action.yml"
-  - message: ""chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+  - message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
 - - "@semantic-release/exec"
   - prepareCmd: sed "s/docker:\/\/asyncapi\/github-action-for-cli:.*/docker:\/\/asyncapi\/github-action-for-cli:${nextRelease.version}'/g" action.yml > action.yml.tmp && mv action.yml.tmp action.yml
 - "@semantic-release/github"
