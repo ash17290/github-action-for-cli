@@ -14,12 +14,8 @@ branches:
 - name: alpha
   prerelease: true
 plugins:
-- - "@semantic-release/commit-analyzer"
-  - preset: conventionalcommits
-- - "@semantic-release/release-notes-generator"
-  - preset: conventionalcommits
 - - "@semantic-release/exec"
-  - prepareCmd: "npm run bump:version"
+  - prepareCmd: "VERSION={$nextRelease.version} npm run bump:version"
 - - "@semantic-release/git"
   - assets:
     - "action.yml"
