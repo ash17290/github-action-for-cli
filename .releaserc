@@ -15,7 +15,7 @@ branches:
   prerelease: true
 plugins:
 - - "@semantic-release/exec"
-  - prepareCmd: "VERSION={$nextRelease.version} npm run bump:version"
+  - prepareCmd: "VERSION=${nextRelease.version} npm run bump:version"
 - - "@semantic-release/git"
   - assets:
     - "action.yml"
